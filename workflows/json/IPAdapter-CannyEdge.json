@@ -3,156 +3,6 @@
   "last_link_id": 63,
   "nodes": [
     {
-      "id": 22,
-      "type": "IPAdapterStyleComposition",
-      "pos": [
-        1988.9776611328125,
-        -1571.511962890625
-      ],
-      "size": [
-        315,
-        322
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "label": "模型",
-          "type": "MODEL",
-          "link": null
-        },
-        {
-          "name": "ipadapter",
-          "label": "IPAdapter",
-          "type": "IPADAPTER",
-          "link": null
-        },
-        {
-          "name": "image_style",
-          "label": "风格图像",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "image_composition",
-          "label": "合成图像",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "image_negative",
-          "label": "负面图像",
-          "type": "IMAGE",
-          "shape": 7,
-          "link": null
-        },
-        {
-          "name": "attn_mask",
-          "label": "关注层遮罩",
-          "type": "MASK",
-          "shape": 7,
-          "link": null
-        },
-        {
-          "name": "clip_vision",
-          "label": "CLIP视觉",
-          "type": "CLIP_VISION",
-          "shape": 7,
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "label": "模型",
-          "type": "MODEL",
-          "links": [],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IPAdapterStyleComposition"
-      },
-      "widgets_values": [
-        0.8,
-        1.8,
-        true,
-        "average",
-        0,
-        1,
-        "V only"
-      ]
-    },
-    {
-      "id": 9,
-      "type": "SaveImage",
-      "pos": [
-        2470.96923828125,
-        -1539.718994140625
-      ],
-      "size": [
-        210,
-        270
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "label": "图像",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "ComfyUI"
-      ]
-    },
-    {
-      "id": 32,
-      "type": "AIO_Preprocessor",
-      "pos": [
-        2780.84521484375,
-        -1523.1514892578125
-      ],
-      "size": [
-        315,
-        82
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "label": "图像",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "label": "图像",
-          "type": "IMAGE",
-          "links": [],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AIO_Preprocessor"
-      },
-      "widgets_values": [
-        "TEEDPreprocessor",
-        1024
-      ]
-    },
-    {
       "id": 19,
       "type": "CLIPTextEncode",
       "pos": [
@@ -164,12 +14,12 @@
         200
       ],
       "flags": {},
-      "order": 11,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
           "name": "clip",
-          "label": "CLIP",
+          "label": "clip",
           "type": "CLIP",
           "link": 15
         }
@@ -177,7 +27,7 @@
       "outputs": [
         {
           "name": "CONDITIONING",
-          "label": "条件",
+          "label": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
             40
@@ -197,49 +47,6 @@
       ]
     },
     {
-      "id": 35,
-      "type": "AnyLineArtPreprocessor_aux",
-      "pos": [
-        2461.872802734375,
-        -1095.4814453125
-      ],
-      "size": [
-        315,
-        178
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "label": "图像",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "label": "图像",
-          "type": "IMAGE",
-          "links": [],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AnyLineArtPreprocessor_aux"
-      },
-      "widgets_values": [
-        "lineart_standard",
-        1280,
-        0,
-        1,
-        39,
-        1
-      ]
-    },
-    {
       "id": 18,
       "type": "CLIPTextEncode",
       "pos": [
@@ -251,12 +58,12 @@
         200
       ],
       "flags": {},
-      "order": 12,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
           "name": "clip",
-          "label": "CLIP",
+          "label": "clip",
           "type": "CLIP",
           "link": 37
         }
@@ -264,7 +71,7 @@
       "outputs": [
         {
           "name": "CONDITIONING",
-          "label": "条件",
+          "label": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
             38
@@ -295,18 +102,18 @@
         78
       ],
       "flags": {},
-      "order": 10,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
-          "label": "模型",
+          "label": "model",
           "type": "MODEL",
           "link": 17
         },
         {
           "name": "ipadapter",
-          "label": "IPAdapter",
+          "label": "ipadapter",
           "type": "IPADAPTER",
           "shape": 7,
           "link": null
@@ -315,7 +122,7 @@
       "outputs": [
         {
           "name": "model",
-          "label": "模型",
+          "label": "model",
           "type": "MODEL",
           "links": [
             47
@@ -324,7 +131,7 @@
         },
         {
           "name": "ipadapter",
-          "label": "IPAdapter",
+          "label": "ipadapter",
           "type": "IPADAPTER",
           "links": [
             44
@@ -351,13 +158,13 @@
         58
       ],
       "flags": {},
-      "order": 4,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "CONTROL_NET",
-          "label": "ControlNet",
+          "label": "CONTROL_NET",
           "type": "CONTROL_NET",
           "links": [
             34
@@ -383,12 +190,12 @@
         106
       ],
       "flags": {},
-      "order": 9,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
-          "label": "图像",
+          "label": "image",
           "type": "IMAGE",
           "link": 20
         }
@@ -396,7 +203,7 @@
       "outputs": [
         {
           "name": "IMAGE",
-          "label": "图像",
+          "label": "IMAGE",
           "type": "IMAGE",
           "links": [
             63
@@ -425,12 +232,12 @@
         106
       ],
       "flags": {},
-      "order": 13,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
-          "label": "图像",
+          "label": "image",
           "type": "IMAGE",
           "link": 63
         }
@@ -438,7 +245,7 @@
       "outputs": [
         {
           "name": "IMAGE",
-          "label": "图像",
+          "label": "IMAGE",
           "type": "IMAGE",
           "links": [
             61,
@@ -467,13 +274,13 @@
         314
       ],
       "flags": {},
-      "order": 5,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "IMAGE",
-          "label": "图像",
+          "label": "IMAGE",
           "type": "IMAGE",
           "links": [
             20
@@ -482,7 +289,7 @@
         },
         {
           "name": "MASK",
-          "label": "遮罩",
+          "label": "MASK",
           "type": "MASK",
           "links": [],
           "slot_index": 1
@@ -508,30 +315,30 @@
         190
       ],
       "flags": {},
-      "order": 14,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
-          "label": "模型",
+          "label": "model",
           "type": "MODEL",
           "link": 47
         },
         {
           "name": "ipadapter",
-          "label": "IPAdapter",
+          "label": "ipadapter",
           "type": "IPADAPTER",
           "link": 44
         },
         {
           "name": "image",
-          "label": "图像",
+          "label": "image",
           "type": "IMAGE",
           "link": 45
         },
         {
           "name": "attn_mask",
-          "label": "关注层遮罩",
+          "label": "attn_mask",
           "type": "MASK",
           "shape": 7,
           "link": null
@@ -540,7 +347,7 @@
       "outputs": [
         {
           "name": "MODEL",
-          "label": "模型",
+          "label": "MODEL",
           "type": "MODEL",
           "links": [
             48
@@ -569,12 +376,12 @@
         246
       ],
       "flags": {},
-      "order": 15,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
-          "label": "图像",
+          "label": "images",
           "type": "IMAGE",
           "link": 61
         }
@@ -597,13 +404,13 @@
         314
       ],
       "flags": {},
-      "order": 6,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "IMAGE",
-          "label": "图像",
+          "label": "IMAGE",
           "type": "IMAGE",
           "links": [
             45
@@ -612,7 +419,7 @@
         },
         {
           "name": "MASK",
-          "label": "遮罩",
+          "label": "MASK",
           "type": "MASK",
           "links": null
         }
@@ -637,30 +444,30 @@
         186
       ],
       "flags": {},
-      "order": 16,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
           "name": "positive",
-          "label": "正面条件",
+          "label": "positive",
           "type": "CONDITIONING",
           "link": 38
         },
         {
           "name": "negative",
-          "label": "负面条件",
+          "label": "negative",
           "type": "CONDITIONING",
           "link": 40
         },
         {
           "name": "control_net",
-          "label": "ControlNet",
+          "label": "control_net",
           "type": "CONTROL_NET",
           "link": 34
         },
         {
           "name": "image",
-          "label": "图像",
+          "label": "image",
           "type": "IMAGE",
           "link": 62
         },
@@ -675,7 +482,7 @@
       "outputs": [
         {
           "name": "positive",
-          "label": "正面条件",
+          "label": "positive",
           "type": "CONDITIONING",
           "links": [
             39
@@ -684,7 +491,7 @@
         },
         {
           "name": "negative",
-          "label": "负面条件",
+          "label": "negative",
           "type": "CONDITIONING",
           "links": [
             41
@@ -713,18 +520,18 @@
         46
       ],
       "flags": {},
-      "order": 18,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
-          "label": "Latent",
+          "label": "samples",
           "type": "LATENT",
           "link": 7
         },
         {
           "name": "vae",
-          "label": "VAE",
+          "label": "vae",
           "type": "VAE",
           "link": 8
         }
@@ -732,7 +539,7 @@
       "outputs": [
         {
           "name": "IMAGE",
-          "label": "图像",
+          "label": "IMAGE",
           "type": "IMAGE",
           "links": [
             12
@@ -757,13 +564,13 @@
         106
       ],
       "flags": {},
-      "order": 7,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "LATENT",
-          "label": "Latent",
+          "label": "LATENT",
           "type": "LATENT",
           "links": [
             2
@@ -792,12 +599,12 @@
         246
       ],
       "flags": {},
-      "order": 19,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
-          "label": "图像",
+          "label": "images",
           "type": "IMAGE",
           "link": 12
         }
@@ -820,13 +627,13 @@
         98
       ],
       "flags": {},
-      "order": 8,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "MODEL",
-          "label": "模型",
+          "label": "MODEL",
           "type": "MODEL",
           "links": [
             17
@@ -872,30 +679,30 @@
         474
       ],
       "flags": {},
-      "order": 17,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
-          "label": "模型",
+          "label": "model",
           "type": "MODEL",
           "link": 48
         },
         {
           "name": "positive",
-          "label": "正面条件",
+          "label": "positive",
           "type": "CONDITIONING",
           "link": 39
         },
         {
           "name": "negative",
-          "label": "负面条件",
+          "label": "negative",
           "type": "CONDITIONING",
           "link": 41
         },
         {
           "name": "latent_image",
-          "label": "Latent",
+          "label": "latent_image",
           "type": "LATENT",
           "link": 2
         }
@@ -903,7 +710,7 @@
       "outputs": [
         {
           "name": "LATENT",
-          "label": "Latent",
+          "label": "LATENT",
           "type": "LATENT",
           "links": [
             7
@@ -1091,10 +898,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.658845000000004,
+      "scale": 0.2143588810000001,
       "offset": [
-        504.5650998236772,
-        957.9199524860817
+        2026.7203384300549,
+        1423.728681080198
       ]
     },
     "node_versions": {
